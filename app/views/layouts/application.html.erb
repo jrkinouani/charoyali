@@ -15,9 +15,27 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'layouts/navigation' %>
 
+    <div class="container-fluid">
+     <%= yield %>
+     <%= render 'layouts/footer' %>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script>
+    $(document).ready(function(){
+      $(".dropdown").hover(
+      function() {
+          $('.dropdown-menu', this).('.in .dropdown-menu');
+          $(this).toggleClass('open');
+      },
+      function() {
+          $('.dropdown-menu', this).('.in .dropdown-menu');
+          $(this).toggleClass('open');
+            }
+        );
+      });
+    </script>
   </body>
 </html>
