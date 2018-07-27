@@ -1,0 +1,69 @@
+  <%= form_with(model: post, local: true) do |form| %>
+    <% if post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+<div class="row">
+  <div class="col-md-6" >
+    <div class="col-md-12" id="content_post">
+    <div class="field">
+      <label for="">Votre annonce</label>
+      <%= form.text_field :title, id: :post_title, placeholder: "Votre nom", class: "form-control" %>
+    </div> <br>
+
+    <div class="field">
+    <label for="">Décrivez votre annonce</label>
+      <%= form.text_area :desc, id: :post_desc, class: "textarea" %>
+    </div><br>
+
+    <div class="field">
+      <label for="">Prix</label>
+      <%= form.number_field :price, id: :post_price, class: "form-control" %>
+    </div>
+  </div>
+  </div>
+
+   <div class="col-md-6">
+   <div class="col-md-12" id="content_post">
+      <div class="field">
+        <label for="">Adresse de départ</label>
+        <%= form.text_field :address_start, id: :post_address_start,class: "form-control" %>
+      </div> <br>
+      <div class="field">
+        <label for="">Adresse de livraison</label>
+        <%= form.text_field :address_end, id: :post_address_end, class: "form-control" %>
+      </div> <br>
+      <div class="field">
+        <label for="">Heure de départ</label>
+        <%= form.time_select :hour_start, id: :post_hour_start %>
+      </div> <br>
+      <div class="field">
+          <label for="">Heure de livraison</label>
+        <%= form.time_select :hour_end, id: :post_hour_end %>
+      </div><br>
+      <div class="field">
+          <label for="">Date de départ</label>
+        <%= form.date_select :date_start, id: :post_date_start %>
+      </div> <br>
+      <div class="field">
+        <label for="">Date de livraison</label>
+        <%= form.date_select :date_end, id: :post_date_end %>
+      </div> <br>
+
+      <div class="col-lg-12">
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+      </div>
+  <% end %>
+     </div>
+     </div>
+</div>

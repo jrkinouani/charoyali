@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  desc: MyText
+  price: 1
+  address_start: MyString
+  address_end: MyString
+  hour_start: 2018-07-27 11:29:20
+  hour_end: 2018-07-27 11:29:20
+  date_start: 2018-07-27
+  date_end: 2018-07-27
+
+two:
+  title: MyString
+  desc: MyText
+  price: 1
+  address_start: MyString
+  address_end: MyString
+  hour_start: 2018-07-27 11:29:20
+  hour_end: 2018-07-27 11:29:20
+  date_start: 2018-07-27
+  date_end: 2018-07-27

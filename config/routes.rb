@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :posts
   root :to => "static_pages#accueil"
   get 'static_pages/ventes'
   get 'static_pages/conditions'
