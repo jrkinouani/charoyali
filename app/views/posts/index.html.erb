@@ -7,6 +7,8 @@
     <tr>
       <th>Title</th>
       <th>Desc</th>
+      <th>User</th>
+        <th>name</th>
       <th>Price</th>
       <th>Address start</th>
       <th>Address end</th>
@@ -23,6 +25,8 @@
       <tr>
         <td><%= post.title %></td>
         <td><%= post.desc %></td>
+        <td><%= post.user.email %></td>
+        <td><%= post.user.first_name %></td>
         <td><%= post.price %></td>
         <td><%= post.address_start %></td>
         <td><%= post.address_end %></td>
@@ -31,8 +35,10 @@
         <td><%= post.date_start %></td>
         <td><%= post.date_end %></td>
         <td><%= link_to 'Show', post %></td>
+        <% if post.user ==  current_user%>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
