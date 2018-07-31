@@ -13,10 +13,6 @@
 	<div class="collapse navbar-collapse js-navbar-collapse">
 		<ul class="nav navbar-nav navbar-right">
       <li><%= button_to "Déposez une annonce", new_post_path, class: "btn btn-primary navbar-btn", :method => :get  %></li>
-
-
-
-
             <% if user_signed_in? %>
             <li class="dropdown">
                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Bienvenu   <%= current_user.first_name %> <%= current_user.last_name %> !<span class="caret"></span></a>
@@ -51,7 +47,7 @@
        					<li class="col-sm-6">
        						<ul>
                      <div class="text-center">
-                     <%= button_to "Livrez des colis ", root_path, class: "btn btn-primary btn-lg", :method => :get  %>
+                     <%= button_to "Livrez des colis ", new_deliveryman_registration_path, class: "btn btn-primary btn-lg", :method => :get  %>
                      </div>
        						</ul>
        					</li>
