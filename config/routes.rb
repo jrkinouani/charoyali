@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   devise_for :users
   resources :posts
-  root :to => "static_pages#accueil"
+  root :to => "static_pages#start"
   get 'static_pages/ventes'
+  get 'static_pages/accueil'
   get 'static_pages/conditions'
   get 'static_pages/FAQ'
   get 'static_pages/mentions'

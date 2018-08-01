@@ -1,6 +1,15 @@
 class StaticPagesController < ApplicationController
+
+  def start
+    respond_to do |format|
+     format.html { render :layout => 'layouts/_header' }
+   end
+ 
+  end
+
   def accueil
   end
+
 
   def ventes
   end
