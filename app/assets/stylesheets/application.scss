@@ -88,15 +88,22 @@
     line-height: normal;
 }
 /* page start*/
-body#start_content.text-center
+body.img-responsive,
+ html{
+min-height:100%;
+min-width: 100%;
+}
+body.img-responsive
 {
-  padding-top: 100px;
+  padding-top: 50px;
   text-align: center;
   background-image: url(/deliveryman.jpeg);
-  height: 100%;
   background-size: cover;
   background-repeat:no-repeat;
   color: white;
-
-
+}
+h1.mb-3.font-weight-normal
+{
+    font-size: 30px;
+    margin-bottom: 30px;
 }
