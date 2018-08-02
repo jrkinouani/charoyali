@@ -1,0 +1,19 @@
+<h1>Firstlivreurs#new</h1>
+<p>Find me in app/views/firstlivreurs/new.html.erb</p>
+
+<div class="container">
+ 	<div class="col-md-4 col-md-offset-4 col-xs-10  col-sm-6 col-sm-offset-3" id="content_mentor">
+    <h3>Inscrivez-vous C'est gratuit !</h3>
+      	<%= form_for @firstlivreur, :class =>" form-signin" do |f|%>
+      	<%= f.text_field :first_name, class:"form-control", :placeholder => "Votre nom"%> <br>
+        <%= f.text_field :last_name, class:"form-control", :placeholder => "Votre prénom"%> <br>
+      	<%= f.email_field :email, class:"form-control", :placeholder => "Votre email"%> <br>
+        <!--<%= f.email_field :phone, class:"form-control", :placeholder => "Votre téléphone"%> <br>
+      	<%= f.select :city ,  ['Quel cours souhaitez-vous prendre ?','Electronique', 'Electricité', 'Raspberry Pi','Arduino','Menuiserie'],	{},{ :class => "form-control"} %> <br>
+      	<%= f.select  :city , ['Quel est votre moyen de transport?','Voiture', 'Camion', 'Vélo','Trottinette','Moto'],	{},{ :class => "form-control"}%> <br>
+        <%= f.select  :usual_route , ['Quel est votre route habituelle ?','Voiture', 'Camion', 'Vélo','Trottinette','Moto'],	{},{ :class => "form-control"}%> <br>-->
+
+		<%= f.submit :value => "Validez",  :class => "btn btn-lg btn-primary btn-block"%>
+      <% end %>
+  </div>
+ </div> <!-- /container -->

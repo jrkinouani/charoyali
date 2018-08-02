@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'firstlivreurs/new'
 
+  get 'firstlivreurs/thanks'
+
+resources :firstlivreurs
   devise_for :users
   resources :posts
   root :to => "static_pages#start"
