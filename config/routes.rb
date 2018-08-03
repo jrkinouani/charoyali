@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :admin, path: 'admin'
   devise_for :users
 
-  get '/firstlivreurs/new' => "firstlivreur#new"
+  get '/firstlivreurs/new' => "firstlivreurs#new"
   get '/firstlivreurs/thanks' => "firstlivreurs#thanks"
 
 resources :firstlivreurs
