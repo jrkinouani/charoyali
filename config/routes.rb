@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :admin, path: 'admin'
+  devise_for :users
+
   get 'firstlivreurs/new'
 
   get 'firstlivreurs/thanks'
 
 resources :firstlivreurs
-  devise_for :users
   resources :posts
   root :to => "static_pages#start"
   get 'static_pages/ventes'
