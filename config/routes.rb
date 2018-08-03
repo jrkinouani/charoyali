@@ -4,14 +4,13 @@ Rails.application.routes.draw do
   devise_for :admin, path: 'admin'
   devise_for :users
 
-  get 'firstlivreurs/new'
-
-  get 'firstlivreurs/thanks'
+  get '/firstlivreurs/new' => "firstlivreur#new"
+  get '/firstlivreurs/thanks' => "firstlivreurs#thanks"
 
 resources :firstlivreurs
   resources :posts
   root :to => "static_pages#start"
-  get 'static_pages/ventes'
+  get 'static_pages/ventes' => "static_pages#ventes"
   get 'static_pages/accueil'
   get 'static_pages/conditions'
   get 'static_pages/FAQ'
