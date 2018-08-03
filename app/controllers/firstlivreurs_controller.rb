@@ -7,10 +7,11 @@ class FirstlivreursController < ApplicationController
   end
 
   def create
-    
+
     @firstlivreur = Firstlivreur.new(firstlivreur_params)
     if @firstlivreur.save
-      redirect_to firstlivreurs_thanks_path
+      NotifierMailer.welcome(@firstlivreur).deliver_now
+     redirect_to firstlivreurs_thanks_path, notice: "Votre réservation a été acceptée"
     end
 
   end
