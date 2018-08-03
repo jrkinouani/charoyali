@@ -11,7 +11,7 @@ class FirstlivreursController < ApplicationController
     @firstlivreur = Firstlivreur.new(firstlivreur_params)
     if @firstlivreur.save
       NotifierMailer.welcome(@firstlivreur).deliver_now
-     redirect_to firstlivreurs_thanks_path, notice: "Votre réservation a été acceptée"
+     redirect_to firstlivreurs_thanks_path
     end
 
   end
