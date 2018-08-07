@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  devise_for :admin, path: 'admin'
-  devise_for :users
+  #devise_for :admin, path: 'admins'
+  #devise_for :users , path: "users"
+
+  devise_for :users, controllers: { sessions: 'users/sessions' }
+  devise_for :admins, controllers: { sessions: 'admins/sessions' }
+
 
   get '/firstlivreurs/new' => "firstlivreurs#new"
   get '/firstlivreurs/thanks' => "firstlivreurs#thanks"
