@@ -7,6 +7,7 @@
       	<%= f.text_field :first_name, class:"form-control", :placeholder => "Votre nom"%> <br>
         <%= f.text_field :last_name, class:"form-control", :placeholder => "Votre prénom"%> <br>
       	<%= f.email_field :email, class:"form-control", :placeholder => "Votre email"%> <br>
+        <%= f.text_field :citystart, class:"form-control", id:"user_input_autocomplete_address", :placeholder => "Votre ville de départ"%>
         <!--<%= f.email_field :phone, class:"form-control", :placeholder => "Votre téléphone"%> <br>
       	<%= f.select :city ,  ['Quel cours souhaitez-vous prendre ?','Electronique', 'Electricité', 'Raspberry Pi','Arduino','Menuiserie'],	{},{ :class => "form-control"} %> <br>
       	<%= f.select  :city , ['Quel est votre moyen de transport?','Voiture', 'Camion', 'Vélo','Trottinette','Moto'],	{},{ :class => "form-control"}%> <br>

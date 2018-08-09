@@ -25,6 +25,6 @@ class FirstlivreursController < ApplicationController
   private
 
   def firstlivreur_params
-    params.require(:firstlivreur).permit(:first_name,:last_name,:email,:phone,:delivery_days,:string,  :city,:string, :transport, :usual_route)
+    params.require(:firstlivreur).permit(:first_name,:last_name,:email,:phone,:delivery_days,:string,  :city,:string, :transport, :usual_route, :citystart)
   end
 end
