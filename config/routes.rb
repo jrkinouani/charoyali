@@ -1,21 +1,21 @@
 Rails.application.routes.draw do
 
   devise_for :users, path_names: {
-    sign_in: 'login',
-    sign_out: 'logout',
-    sign_up: 'signup',}
+      sign_in: 'login',
+      sign_out: 'logout',
+      sign_up: 'signup',}
 
-  devise_for :admin, path_names: {
-    sign_in: 'login',
-    sign_out: 'logout',
-    sign_up: 'signup',},
-    :controllers => {registrations:  "admins/registrations"}
+    devise_for :admin, path_names: {
+      sign_in: 'login',
+      sign_out: 'logout',
+      sign_up: 'signup',},
+      :controllers => {registrations:  "admins/registrations"}
 
-mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
 
-  get '/firstlivreurs/new' => "firstlivreurs#new"
   get '/firstlivreurs/thanks' => "firstlivreurs#thanks"
+
   root :to => "firstlivreurs#new"
 resources :firstlivreurs
   resources :posts
