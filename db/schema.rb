@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180803063418) do
+ActiveRecord::Schema.define(version: 20180810055219) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(version: 20180803063418) do
     t.string "usual_route"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "citystart"
+    t.string "city_depart"
+    t.string "city_arrival"
   end
 
   create_table "posts", force: :cascade do |t|

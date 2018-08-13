@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
 resources :firstlivreurs
   resources :posts
-  root :to => "static_pages#start"
+  root :to => "firstlivreurs#new"
   get 'static_pages/ventes' => "static_pages#ventes"
   get 'static_pages/accueil'
   get 'static_pages/conditions'

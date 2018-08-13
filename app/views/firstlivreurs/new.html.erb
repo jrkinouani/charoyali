@@ -1,18 +1,32 @@
 
-
 <div class="container">
- 	<div class="col-md-4 col-md-offset-4 col-xs-10  col-sm-6 col-sm-offset-3" id="content_mentor">
-    <img class="mb-4" src="/logo-charoyali.jpg" alt="" width="100" height="100"> <br> <br>
+  <div class="col-md-6  col-xs-10  col-sm-6" id="content_mentor">
+    <h1 class="slogan">Charoyali a besoin de livreurs comme vous</h1> <br>
+
+    <p><h3>Charoyali est un site de transport de colis <br> entre particuliers sur toute l'île de la reunion</h3></p>
+  </div>
+
+ 	<div class="col-md-6  col-xs-10  col-sm-6" id="content_mentor">
       	<%= form_for @firstlivreur, :class =>" form-signin" do |f|%>
       	<%= f.text_field :first_name, class:"form-control", :placeholder => "Votre nom"%> <br>
         <%= f.text_field :last_name, class:"form-control", :placeholder => "Votre prénom"%> <br>
       	<%= f.email_field :email, class:"form-control", :placeholder => "Votre email"%> <br>
-        <!--<%= f.email_field :phone, class:"form-control", :placeholder => "Votre téléphone"%> <br>
-      	<%= f.select :city ,  ['Quel cours souhaitez-vous prendre ?','Electronique', 'Electricité', 'Raspberry Pi','Arduino','Menuiserie'],	{},{ :class => "form-control"} %> <br>
-      	<%= f.select  :city , ['Quel est votre moyen de transport?','Voiture', 'Camion', 'Vélo','Trottinette','Moto'],	{},{ :class => "form-control"}%> <br>
+        <!--<%= f.email_field :phone, class:"form-control", :placeholder => "Votre téléphone"%> <br>-->
+      	<%= f.select :city_depart ,  ['Quel est votre ville de départ ?',"Les Avirons", "Bras-Panon",
+           "Cilaos", "'Entre-Deux'", "L'Étang-Salé", "Petite-Île", "La Plaine-des-Palmistes", "Le Port",
+           "La Possession", "Saint-André", "Saint-Benoît", "Saint-Denis", "Sainte-Marie", "Sainte-Rose",
+           "Sainte-Suzanne", "Saint-Joseph", "Saint-Leu", "Saint-Louis", "Saint-Paul", "Saint-Philippe",
+            "Saint-Pierre", "Salazie", "Le Tampon", "Les Trois-Bassins"], {} ,{ :class => "form-control"} %> <br>
+          <%= f.select :city_arrival ,  ["Quel est votre ville d'arrivée ?" , "Les Avirons", "Bras-Panon",
+             "Cilaos", "'Entre-Deux'", "L'Étang-Salé", "Petite-Île", "La Plaine-des-Palmistes", "Le Port",
+             "La Possession", "Saint-André", "Saint-Benoît", "Saint-Denis", "Sainte-Marie", "Sainte-Rose",
+             "Sainte-Suzanne", "Saint-Joseph", "Saint-Leu", "Saint-Louis", "Saint-Paul", "Saint-Philippe",
+              "Saint-Pierre", "Salazie", "Le Tampon", "Les Trois-Bassins"],
+          	{},{ :class => "form-control"} %> <br>
+      	<!--<%= f.select  :city , ['Quel est votre moyen de transport?','Voiture', 'Camion', 'Vélo','Trottinette','Moto'],	{},{ :class => "form-control"}%> <br>
         <%= f.select  :usual_route , ['Quel est votre route habituelle ?','Voiture', 'Camion', 'Vélo','Trottinette','Moto'],	{},{ :class => "form-control"}%> <br>-->
 
-		<%= f.submit :value => "Validez",  :class => "btn btn-lg btn-primary btn-block"%>
+		<%= f.submit :value => "Inscrivez-vous c'est gratuit !",  :class => "btn btn-lg btn-primary btn-block"%>
       <% end %>
   </div>
  </div> <!-- /container -->
