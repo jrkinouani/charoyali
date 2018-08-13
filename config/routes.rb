@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/firstlivreurs/new' => "firstlivreurs#new"
   get '/firstlivreurs/thanks' => "firstlivreurs#thanks"
 
+
 resources :firstlivreurs
   resources :posts
   root :to => "firstlivreurs#new"
