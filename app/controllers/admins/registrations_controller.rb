@@ -4,8 +4,13 @@ class Admins::RegistrationsController < Devise::RegistrationsController
    before_action :configure_sign_up_params, only: [:create]
    before_action :configure_account_update_params, only: [:update]
 
+<<<<<<< HEAD
   include Accessible
   skip_before_action :check_user, except: [:new, :create]
+=======
+  #include Accessible
+  #skip_before_action :check_user, except: [:new, :create]
+>>>>>>> 4bf2f5f71bd22355a056957f7f8fde40f1200f74
   # GET /resource/sign_up
   # def new
   #   super

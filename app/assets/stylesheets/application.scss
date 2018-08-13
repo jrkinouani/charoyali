@@ -1,7 +1,6 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
- @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
 
  body {
    font-family: 'Open Sans', 'sans-serif';
@@ -95,7 +94,6 @@ min-width: 100%;
 }
 body.img-responsive
 {
-  padding-top: 50px;
   text-align: center;
   background-color: #fff;
   /*background-image: url(/deliveryman.jpeg);*/
@@ -125,4 +123,25 @@ h1.mb-3.font-weight-normal
     -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
     transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+/*page new firstlivreur */
+
+#content_mentor.col-md-6.col-xs-10.col-sm-6
+{
+    margin-top: 50px;
+    text-align: left;
+}
+h1.slogan
+{
+    font-size: 4.8rem;
+    color: #5b5e6d;
+}
+.btn.btn.btn-lg.btn-primary.btn-block
+
+{
+    background-color: #FF8C00;
+}
+h1.thanks
+{
+    margin-top: 150px;
 }

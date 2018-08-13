@@ -16,7 +16,7 @@ mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get '/firstlivreurs/new' => "firstlivreurs#new"
   get '/firstlivreurs/thanks' => "firstlivreurs#thanks"
-  root  "static_pages#start"
+  root :to => "firstlivreurs#new"
 resources :firstlivreurs
   resources :posts
 
