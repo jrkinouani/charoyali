@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20180810055219) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+<<<<<<< HEAD
   create_table "deliverymen", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -46,6 +47,8 @@ ActiveRecord::Schema.define(version: 20180810055219) do
     t.index ["reset_password_token"], name: "index_deliverymen_on_reset_password_token", unique: true
   end
 
+=======
+>>>>>>> 4bf2f5f71bd22355a056957f7f8fde40f1200f74
   create_table "firstlivreurs", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"

@@ -1,0 +1,2 @@
+class Firstlivreur < ApplicationRecord
+end
