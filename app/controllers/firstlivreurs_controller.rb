@@ -7,13 +7,11 @@ class FirstlivreursController < ApplicationController
   end
 
   def create
-
     @firstlivreur = Firstlivreur.new(firstlivreur_params)
     if @firstlivreur.save
       NotifierMailer.welcome(@firstlivreur).deliver_now
      redirect_to firstlivreurs_thanks_path
     end
-
   end
 
   def thanks
