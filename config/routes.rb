@@ -15,7 +15,7 @@ Rails.application.routes.draw do
       sign_in: 'login',
       sign_out: 'logout',
       sign_up: 'signup',},
-      :controllers => {registrations:  "admins/registrations"}
+      :controllers => {registrations:  "admins/registrations", sessions: "admins/sessions"}
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
